@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Search from './Search';
+import Option from './Option';
+import Menu from './Menu';
+import Feed from './Feed';
+import LeftSidebar from './LeftSidebar';
+import RightSidebar from './RightSidebar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { /* header component */ }
+      <div className='myHeader'>
+        <div className='myHeader__search'><Search /></div>
+
+        <div className='myHeader__option'><Option /></div>
+        
+        <div className='myHeader__menu'><Menu /></div>
+      </div>
+
+      { /* body component */ }
+      <div className='myBody'>
+
+        { /* left sidebar */ }
+        <div><LeftSidebar /></div>
+        
+        { /* feed */ }
+        <div><Feed /></div>
+
+        { /* right sidebar */ }
+        <div><RightSidebar /></div>
+      </div>
     </div>
   );
 }

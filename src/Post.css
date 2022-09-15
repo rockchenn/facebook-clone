@@ -1,0 +1,24 @@
+.post {
+    color: #b7b8bc;
+    background-color: #242526;
+    margin-top: 15px;
+    border-radius: 5%;
+}
+
+.post__header {
+    display: flex;
+    align-items: center;
+}
+
+.post__header > div {
+    margin-left: 5px;
+}
+
+.post__header > div > * {
+    /* background-color: antiquewhite; */
+    margin: 0;
+}
+
+.post__header > div > p {
+    font-size: small;
+}

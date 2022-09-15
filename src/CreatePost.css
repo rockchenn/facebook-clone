@@ -1,0 +1,49 @@
+.createPost {
+    margin-top: 20px;
+    background-color: #242526;
+    border-radius: 5%;
+    padding-top: 10px;
+}
+
+.createPost__top {
+    display: flex;
+    align-items: center;
+}
+
+.createPost__top > form {
+    margin-left: 15px;
+}
+
+.createPost__top > form > input {
+    border-radius: 15px;
+    background-color: #3a3b3c;
+    height: 40px;
+    width: 550px;
+    font-size: large;
+    padding-left: 10px;
+    border: none;
+}
+
+.createPost__top > form > input::placeholder {
+    color: #b0b3b8;
+}
+
+.createPost__top > form > button {
+    display: none;
+}
+
+.createPost__bottom {
+    display: flex;
+}
+
+.createPost__bottom__option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createPost__bottom__option > h4 {
+    color: #b0b3b8;
+    margin-left: 5px;
+}

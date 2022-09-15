@@ -1,0 +1,19 @@
+.option {
+    display: flex;
+}
+
+.option > div {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.option__home {
+    border-bottom: solid;
+    border-bottom-color: #2374e1;
+}
+
+.option > div > * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

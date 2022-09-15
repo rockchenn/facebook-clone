@@ -1,0 +1,11 @@
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu > div {
+    background-color: #3a3b3c;
+    padding: 6px;
+    border-radius: 100%;
+    margin-left: 10px;
+}

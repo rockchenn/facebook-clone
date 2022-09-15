@@ -1,0 +1,14 @@
+.leftSidebar > div {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.leftSidebar > div > h4 {
+    /* background-color: aliceblue; */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: #b7b8bc;
+}
