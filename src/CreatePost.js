@@ -1,22 +1,39 @@
-import React from 'react';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import React, { useState } from 'react';
+import Avatar from '@mui/material/Avatar';
 import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
 import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import './CreatePost.css';
+import { addDoc, serverTimestamp } from "firebase/firestore"; 
+import { colRef } from './firebase';
 
-function CreatePost() {
+function CreatePost(props) {
+    const [ inputText, setInputText ] = useState();
 
-    const handleSubmit = (evt) => {
+    const handleSubmit = async (evt) => {
         evt.preventDefault();
+
+        try {
+            await addDoc(colRef, {
+                avatar: props.avatar,
+                image: '',
+                message: inputText,
+                name: props.name,
+                timestamp: serverTimestamp()
+            });
+
+            setInputText('');
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
     };
 
     return (
     <div className='createPost'>
         <div className='createPost__top'>
-            <AccountCircleIcon style={{ color: 'b7b8bc', fontSize: '32px' }} />
+            <Avatar src={ props.avatar } sx={{ width: 32, height: 32}} />
             <form>
-                <input placeholder="What's on your mind" />
+                <input value={ inputText } placeholder="What's on your mind" onChange={ evt => setInputText(evt.target.value) } />
                 <button onClick={handleSubmit} type='submit' />
             </form>
         </div>        

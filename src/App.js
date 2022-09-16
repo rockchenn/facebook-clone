@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Search from './Search';
 import Option from './Option';
@@ -5,31 +6,32 @@ import Menu from './Menu';
 import Feed from './Feed';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
+import Login from './Login';
 
 function App() {
+  const [ user, setUser ] = useState();
+
   return (
     <div className="App">
-      { /* header component */ }
-      <div className='myHeader'>
-        <div className='myHeader__search'><Search /></div>
+      {user?.name ? (
+        <>
+          <div className='myHeader'>
+            <div className='myHeader__search'><Search /></div>
 
-        <div className='myHeader__option'><Option /></div>
-        
-        <div className='myHeader__menu'><Menu /></div>
-      </div>
+            <div className='myHeader__option'><Option /></div>
+            
+            <div className='myHeader__menu'><Menu avatar={ user.avatar } /></div>
+          </div>
 
-      { /* body component */ }
-      <div className='myBody'>
+          <div className='myBody'>
+            <div><LeftSidebar name={ user.name } avatar={ user.avatar } /></div>
+            
+            <div><Feed name={ user.name } avatar={ user.avatar } /></div>
 
-        { /* left sidebar */ }
-        <div><LeftSidebar /></div>
-        
-        { /* feed */ }
-        <div><Feed /></div>
-
-        { /* right sidebar */ }
-        <div><RightSidebar /></div>
-      </div>
+            <div><RightSidebar /></div>
+          </div>
+        </>) : <Login cb={ setUser } error={ user?.error } />
+      }
     </div>
   );
 }

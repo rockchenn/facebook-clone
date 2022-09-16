@@ -1,5 +1,5 @@
 import React from 'react';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Avatar from '@mui/material/Avatar';
 import PeopleIcon from '@mui/icons-material/People';
 import GroupsIcon from '@mui/icons-material/Groups';
 import FlagIcon from '@mui/icons-material/Flag';
@@ -9,12 +9,12 @@ import HistoryIcon from '@mui/icons-material/History';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import './LeftSidebar.css';
 
-function LeftSidebar() {
+function LeftSidebar(props) {
   return (
     <div className='leftSidebar'>
         <div>
-            <AccountCircleIcon style={{ color: 'b7b8bc', fontSize: '32px' }} />
-            <h4>name</h4>
+            <Avatar src={ props.avatar } sx={{ width: 32, height: 32}} />
+            <h4>{ props.name }</h4>
         </div>
         <div>
             <PeopleIcon style={{ color: '#2374e1', fontSize: '32px' }} />

@@ -1,19 +1,22 @@
 import React from 'react';
 import './Post.css';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Avatar from '@mui/material/Avatar';
 
-function Post() {
+function Post(props) {
+  const post = props?.post;
+
   return (
     <div className='post'>
         <div className='post__header'>
-            <AccountCircleIcon style={{ color: 'b7b8bc', fontSize: '32px' }} />
-            <div>
-                <h4>name</h4>
-                <p>timestamp</p>
-            </div>
+          <Avatar src={ post?.avatar } sx={{ width: 32, height: 32}} />
+          <div>
+              <h4>{ post?.name }</h4>
+              <p>{ new Date(post?.timestamp?.toDate()).toUTCString() }</p>
+          </div>
         </div>
         <div className='post__body'>
-            <p>this works</p>
+            <p>{ post?.message }</p>
+            <img src={ post?.image } alt={ post?.image } />
         </div>
     </div>
   );
