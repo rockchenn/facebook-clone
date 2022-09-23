@@ -20,6 +20,12 @@ function CreatePost(props) {
         document.querySelector('.backdrop').className = 'backdrop active';
     };
 
+    const closePopUpInput = (e) => {
+        e.preventDefault();
+        document.querySelector('.popUpInput').className = 'popUpInput';
+        document.querySelector('.backdrop').className = 'backdrop';
+    }
+
     const handlePopUpInputChanged = (e) => {
         e.preventDefault();
 
@@ -63,13 +69,16 @@ function CreatePost(props) {
 
         document.querySelector('.popUpInput').className = 'popUpInput';
         document.querySelector('.backdrop').className = 'backdrop';
+        document.querySelector('.popUpInput__message__initial').className = 'popUpInput__message__initial';
+        document.querySelector('.popUpInput__message__text').innerHTML = '';
     }
 
     return (
     <div className='createPost'>
+        <div className='backdrop' onClick={ closePopUpInput }></div>
         <div className='createPost__top'>
             <Avatar src={ props.avatar } sx={{ width: 32, height: 32}} />
-            <div className='trPopUpInput' onClick={ openPopUpInput }><span>What's on your mind, { props.name }?</span></div>
+            <div className='trPopUpInput' onClick={ openPopUpInput }><span>{ inputText ? inputText : "What's on your mind, " + props.name + "?" }</span></div>
         </div>        
         <div className='createPost__bottom'>
             <div className='createPost__bottom__option'>
@@ -91,7 +100,7 @@ function CreatePost(props) {
             <div className="popUpInput__header">
                 <div>
                     <h3>Create post</h3>
-                    <a href="">X</a>
+                    <a href="" onClick={ closePopUpInput }>X</a>
                 </div>
                 <div>                    
                     <Avatar src={ props.avatar } sx={{ width: 32, height: 32}} />

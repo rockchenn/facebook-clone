@@ -5,6 +5,18 @@
     padding-top: 10px;
 }
 
+.backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .backdrop.active {
+    display: block;
+  }
+
 .createPost__top {
     display: flex;
     align-items: center;
