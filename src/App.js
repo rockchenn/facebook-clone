@@ -15,6 +15,7 @@ function App() {
     <div className="App">
       {user?.name ? (
         <>
+          <div className='backdrop'></div>
           <div className='myHeader'>
             <div className='myHeader__search'><Search /></div>
 

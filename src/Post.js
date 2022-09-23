@@ -15,7 +15,15 @@ function Post(props) {
           </div>
         </div>
         <div className='post__body'>
-            <p>{ post?.message }</p>
+            {/* reference from https://stackoverflow.com/questions/63232588/how-to-make-a-new-line-for-react */}
+            <p>{ post?.message.split('\n').map(line => {
+              return (
+                <>
+                  {line}
+                  <br />
+                </>
+              );
+            }) }</p>
             <img src={ post?.image } alt={ post?.image } />
         </div>
     </div>

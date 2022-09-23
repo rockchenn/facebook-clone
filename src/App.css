@@ -1,5 +1,13 @@
-.App {
-  /* text-align: center; */
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.backdrop.active {
+  display: block;
 }
 
 .myHeader {
