@@ -21,7 +21,7 @@ function Feed(props) {
         return post;
       }));
     });
-  });
+  }, []);
 
   return (
     <div className='feed'>
