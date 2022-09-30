@@ -82,17 +82,17 @@ function CreatePost(props) {
         </div>        
         <div className='createPost__bottom'>
             <div className='createPost__bottom__option'>
-                <VideoCameraFrontIcon style={{ color: 'red', fontSize: '32px' }} />
+                <VideoCameraFrontIcon style={{ color: 'red', fontSize: '26px' }} />
                 <h4>Live video</h4>
             </div>
 
             <div className='createPost__bottom__option'>
-                <InsertPhotoIcon style={{ color: 'green', fontSize: '32px' }} />
+                <InsertPhotoIcon style={{ color: 'green', fontSize: '26px' }} />
                 <h4>Photo/video</h4>
             </div>
 
             <div className='createPost__bottom__option'>
-                <EmojiEmotionsIcon style={{ color: 'yellow', fontSize: '32px' }} />
+                <EmojiEmotionsIcon style={{ color: 'yellow', fontSize: '26px' }} />
                 <h4>Feeling/activity</h4>
             </div>
         </div>

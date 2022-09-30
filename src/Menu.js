@@ -18,7 +18,7 @@ function Menu(props) {
             <NotificationsIcon style={{ color: '#b0b3b8', fontSize: '24px' }} />
         </div>
         <div className='menu__account'>
-        <Avatar src={props.avatar} sx={{ width: 28, height: 28}} />
+            <Avatar src={props.avatar} sx={{ width: 24, height: 24}} />
         </div>
     </div>
   );

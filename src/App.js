@@ -24,11 +24,11 @@ function App() {
           </div>
 
           <div className='myBody'>
-            <div><LeftSidebar name={ user.name } avatar={ user.avatar } /></div>
+            <LeftSidebar name={ user.name } avatar={ user.avatar } />
             
-            <div><Feed name={ user.name } avatar={ user.avatar } /></div>
+            <Feed name={ user.name } avatar={ user.avatar } />
 
-            <div><RightSidebar /></div>
+            <RightSidebar />
           </div>
         </>) : <Login cb={ setUser } error={ user?.error } />
       }

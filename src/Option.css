@@ -1,5 +1,11 @@
 .option {
-    display: flex;
+    display: none;
+}
+
+@media (min-width: 950px) {
+    .option {
+        display: flex;
+    }
 }
 
 .option > div {

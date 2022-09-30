@@ -1,0 +1,25 @@
+.rightSidebar {
+    min-width: 280px;
+    max-width: 360px;
+}
+
+@media (max-width: 950px) {
+    .rightSidebar {
+        display: none;
+    }
+}
+
+.contact__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact__header > * {
+    flex: 1;
+}
+
+.contact__header > span {
+    color: #b0b3b8;
+    flex: 5;
+}

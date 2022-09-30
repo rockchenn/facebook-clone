@@ -1,6 +1,6 @@
 .search {
     display: flex;
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 .search > img {
@@ -14,13 +14,22 @@
     background-color: #3a3b3c;
     border-radius: 50px;
     margin-left: 10px;
+    width: 240px;
+    height: 40px;
+}
+
+.search > form.resize {
+    width: 40px;
 }
 
 .search > form > input {
     border: none;
     background-color: #3a3b3c;
     width: 80%;
-    font-size: large;
+    font-size: 14px;
+    outline: none;
+    margin-left: 20px;
+    caret-color: #b0b3b8;
 }
 
 .search > form > input::placeholder {

@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 56px;
+  --header-padding: 20px;
+  --body-padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
 .backdrop {
   display: none;
   position: fixed;
@@ -12,8 +28,14 @@
 
 .myHeader {
   display: flex;
+  align-items: center;
   background-color: #242526;
-  padding: 10px 20px 0px 20px;
+  height: var(--header-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding: 0 var(--header-padding);
 }
 
 .myHeader > div {
@@ -26,10 +48,21 @@
 
 .myBody {
   display: flex;
+  justify-content: space-between;
   background-color: #18191a;
-  height: 100vh;
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+  top: var(--header-height);
+  padding: var(--body-padding);
+  min-width: 520px;
 }
 
-.myBody > div {
+@media (max-width: 950px) {
+  .myBody {
+    justify-content: center;
+  }
+}
+
+.myBody > * {
   flex: 1;
 }

@@ -5,7 +5,15 @@
 
 .menu > div {
     background-color: #3a3b3c;
-    padding: 6px;
-    border-radius: 100%;
-    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+
+.menu > div > * {
+    position: absolute;
+    top: 4px;
+    left: 4px;
 }
