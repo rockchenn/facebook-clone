@@ -14,7 +14,7 @@ function Feed(props) {
      * https://firebase.google.com/docs/firestore/query-data/order-limit-data
      */
     const q = query(colRef, orderBy('timestamp', 'desc'));
-    onSnapshot(q, snapshot => {
+    return onSnapshot(q, snapshot => {
       setPosts(snapshot.docs.map(doc => {
         const post = doc.data();
         post.id = doc.id;

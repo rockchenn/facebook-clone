@@ -9,7 +9,6 @@ import HistoryIcon from '@mui/icons-material/History';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import './LeftSidebar.css';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import { red } from '@mui/material/colors';
 
 function LeftSidebar(props) {
   return (
@@ -19,7 +18,7 @@ function LeftSidebar(props) {
             autoHide
             renderThumbVertical={({ style, props}) =>
                 <div style={{ ...style, backgroundColor: '#b7b8bc80', borderRadius: '3px', width: '7px' }} {...props} />
-            }>
+        }>
             <div className='leftSidebar__item'>
                 <Avatar src={ props.avatar } sx={{ width: 32, height: 32}} />
                 <h4>{ props.name }</h4>

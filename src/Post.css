@@ -3,11 +3,13 @@
     background-color: #242526;
     margin-top: 15px;
     border-radius: 5%;
+    padding: 20px;
 }
 
 .post__header {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .post__header > div {
@@ -20,4 +22,12 @@
 
 .post__header > div > p {
     font-size: small;
+}
+
+.post__body > p {
+    margin-bottom: 20px;
+}
+
+.post__body > img {
+    max-width: 100%;
 }

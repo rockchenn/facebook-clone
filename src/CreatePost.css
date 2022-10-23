@@ -6,16 +6,12 @@
 }
 
 .backdrop {
-    display: none;
+    display: block;
     position: fixed;
     inset: 0;
-    backdrop-filter: blur(3px);
-    z-index: 1;
-  }
-  
-  .backdrop.active {
-    display: block;
-  }
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 2;
+}
 
 .createPost__top {
     display: flex;
@@ -61,16 +57,11 @@
 .popUpInput {
     background-color: #242526;
     color: #a8aab1;
-    display: none;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 2;
-}
-
-.popUpInput.active {
+    border-radius: 5%;
     display: grid;
+    position: relative;
+    padding: 20px;
+    z-index: 2;
 }
 
 .popUpInput a {
@@ -80,14 +71,15 @@
 
 .popUpInput__header {
     display: grid;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .popUpInput__header > :nth-child(1) {
     display: grid;
     grid-template-columns: 1fr min-content;
     align-items: center;
-    border-bottom: 1px solid #b0b3b8;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+    padding-bottom: 5px;
 }
 
 .popUpInput__header > :nth-child(1) > h3 {
@@ -98,6 +90,8 @@
     background-color: #3a3b3c;
     padding: 10px 12px;
     border-radius: 100%;
+    width: 34px;
+    height: 34px;
 }
 
 .popUpInput__header > :nth-child(2) {
@@ -112,27 +106,65 @@
 }
 
 .popUpInput__message {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-}
-
-.popUpInput__message > :nth-child(1) {
-    grid-column: 1 / span 2;
-    margin-bottom: 50px;
-}
-
-.popUpInput__message > :nth-child(3) {
     position: relative;
 }
 
-.popUpInput__message > :nth-child(3) > * {
-    position: relative;
-    left: 90%;
+.popUpInput__message__text {
+    padding-bottom: 50px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+
+.popUpInput__message__image {
+    border: 2px solid #323436;
+    border-radius: 5px;
+    height: 200px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.popUpInput__message__image > div {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #323436;
+}
+
+.popUpInput__message__image > div:hover {
+    background-color: #5a5d61;
+}
+
+.popUpInput__message__image a {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #606264;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.popUpInput__message__image input {
+    display: none;
+}
+
+.popUpInput__message__image img {
+    width: 100%;
+}
+
+.popUpInput__message__image p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .popUpInput__message__initial {
     position: absolute;
+    top: 0;
+    font-size: 24px;
+    z-index: -1;
 }
 
 .popUpInput__message__initial.off {
@@ -144,22 +176,30 @@
 }
 
 .popUpInput__widget > :nth-child(1) {
-    border: thin solid #b0b3b8;
-    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
 }
 
-.popUpInput__widget > :nth-child(1) {
+.popUpInput__widget > :nth-child(1) > :nth-child(2) {
+    justify-self: end;
+}
+
+.popUpInput__widget > :nth-child(2) {
     display: grid;
     grid-template-columns: 1fr min-content min-content min-content min-content min-content;
     align-items: center;
     padding: 10px;
+    margin-top: 20px;
+    border: thin solid #b0b3b8;
+    border-radius: 5px;
 }
 
-.popUpInput__widget > :nth-child(1) > * {
+.popUpInput__widget > :nth-child(2) > * {
     margin-left: 10px;
 }
 
-.popUpInput__widget > :nth-child(2) {
+.popUpInput__widget > :nth-child(3) {
     background-color: #505151;
     text-align: center;
     padding: 10px;
