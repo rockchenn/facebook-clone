@@ -29,7 +29,7 @@ function Feed(props) {
       { /* create post */ }
       <CreatePost name={ props.name } avatar={ props.avatar} />
       { /* posts */ }
-      { posts?.map(post => <Post key={ post.id } post={ post } />) }
+      { posts?.map(post => <Post key={ post.id } post={ post } keyword={ props.keyword } />) }
     </div>
   );
 }

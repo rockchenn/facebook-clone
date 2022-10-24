@@ -10,13 +10,14 @@ import Login from './Login';
 
 function App() {
   const [ user, setUser ] = useState();
+  const [ keyword, setKeyword ] = useState('');
 
   return (
     <div className="App">
       {user?.name ? (
         <>
           <div className='myHeader'>
-            <div className='myHeader__search'><Search /></div>
+            <div className='myHeader__search'><Search setKeyword={ setKeyword } /></div>
 
             <div className='myHeader__option'><Option /></div>
             
@@ -26,7 +27,7 @@ function App() {
           <div className='myBody'>
             <LeftSidebar name={ user.name } avatar={ user.avatar } />
             
-            <Feed name={ user.name } avatar={ user.avatar } />
+            <Feed name={ user.name } avatar={ user.avatar } keyword={ keyword } />
 
             <RightSidebar />
           </div>

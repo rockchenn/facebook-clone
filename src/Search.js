@@ -3,7 +3,7 @@ import './Search.css';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-function Search() {
+function Search({ setKeyword }) {
   const [isFocus, setFocus] = useState(false);
 
   useEffect(() => {
@@ -31,11 +31,19 @@ function Search() {
   const handleUnfocus = (e) => {
     const form = document.querySelector('.search > form');
     setFocus(false);
+    setKeyword('');
 
     if (window.innerWidth <= 950) {
       form.classList.add('resize');
     }
   };
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      setKeyword(e.target.value);
+    }
+  }
 
   return (
     <div className='search'>
@@ -43,7 +51,7 @@ function Search() {
       { isFocus && <ArrowBackIcon style={{ color: '#b0b3b8' }} onClick={ handleUnfocus } /> }
       <form onClick={ handleFocus }>
         { !isFocus && <SearchIcon style={{ color: '#b0b3b8', paddingLeft: '10px', fontSize: '32px' }} /> }
-        <input placeholder='Search Facebook' />
+        <input onKeyDown={ handleSearch } placeholder='Search Facebook' />
         <button type='submit' />
       </form>
     </div>
