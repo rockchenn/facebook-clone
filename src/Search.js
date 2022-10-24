@@ -39,13 +39,13 @@ function Search() {
 
   return (
     <div className='search'>
-        { !isFocus && <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png' alt='facebook logo' /> }
-        { isFocus && <ArrowBackIcon style={{ color: '#b0b3b8' }} onClick={ handleUnfocus } /> }
-        <form onClick={ handleFocus }>
-            { !isFocus && <SearchIcon style={{ color: '#b0b3b8', paddingLeft: '10px', fontSize: '32px' }} /> }
-            <input placeholder='Search Facebook' />
-            <button type='submit' />
-        </form>
+      { !isFocus && <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png' alt='facebook logo' /> }
+      { isFocus && <ArrowBackIcon style={{ color: '#b0b3b8' }} onClick={ handleUnfocus } /> }
+      <form onClick={ handleFocus }>
+        { !isFocus && <SearchIcon style={{ color: '#b0b3b8', paddingLeft: '10px', fontSize: '32px' }} /> }
+        <input placeholder='Search Facebook' />
+        <button type='submit' />
+      </form>
     </div>
   );
 }

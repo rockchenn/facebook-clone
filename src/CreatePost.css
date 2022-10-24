@@ -1,208 +1,208 @@
 .createPost {
-    background-color: #242526;
-    border-radius: 5%;
-    width: 100%;
-    padding: 20px;
+  background-color: #242526;
+  border-radius: 5%;
+  width: 100%;
+  padding: 20px;
 }
 
 .backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, .7);
-    z-index: 2;
+  display: block;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 2;
 }
 
 .createPost__top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .trPopUpInput {
-    border-radius: 15px;
-    background-color: #3a3b3c;
-    height: 40px;
-    width: 100%;
-    padding-left: 10px;
-    margin-left: 10px;
-    border: none;
-    line-height: 40px;
+  border-radius: 15px;
+  background-color: #3a3b3c;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  margin-left: 10px;
+  border: none;
+  line-height: 40px;
 }
 
 .trPopUpInput > span {
-    display: inline-block;
-    color: #b0b3b8;
-    vertical-align: middle;
-    line-height: normal;
+  display: inline-block;
+  color: #b0b3b8;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .createPost__bottom {
-    display: flex;
+  display: flex;
 }
 
 .createPost__bottom__option {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .createPost__bottom__option > h4 {
-    color: #b0b3b8;
-    margin-left: 5px;
-    font-size: 14px;
+  color: #b0b3b8;
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .popUpInput {
-    background-color: #242526;
-    color: #a8aab1;
-    border-radius: 5%;
-    display: grid;
-    position: relative;
-    padding: 20px;
-    z-index: 2;
+  background-color: #242526;
+  color: #a8aab1;
+  border-radius: 5%;
+  display: grid;
+  position: relative;
+  padding: 20px;
+  z-index: 2;
 }
 
 .popUpInput a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .popUpInput__header {
-    display: grid;
-    margin-bottom: 20px;
+  display: grid;
+  margin-bottom: 20px;
 }
 
 .popUpInput__header > :nth-child(1) {
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, .05);
-    padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .05);
+  padding-bottom: 5px;
 }
 
 .popUpInput__header > :nth-child(1) > h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .popUpInput__header > :nth-child(1) > a {
-    background-color: #3a3b3c;
-    padding: 10px 12px;
-    border-radius: 100%;
-    width: 34px;
-    height: 34px;
+  background-color: #3a3b3c;
+  padding: 10px 12px;
+  border-radius: 100%;
+  width: 34px;
+  height: 34px;
 }
 
 .popUpInput__header > :nth-child(2) {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    align-items: center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
 }
 
 .popUpInput__header > :nth-child(2) > p {
-    margin-left: 6px;
+  margin-left: 6px;
 }
 
 .popUpInput__message {
-    position: relative;
+  position: relative;
 }
 
 .popUpInput__message__text {
-    padding-bottom: 50px;
-    border: none;
-    outline: none;
-    font-size: 24px;
+  padding-bottom: 50px;
+  border: none;
+  outline: none;
+  font-size: 24px;
 }
 
 .popUpInput__message__image {
-    border: 2px solid #323436;
-    border-radius: 5px;
-    height: 200px;
-    overflow: auto;
-    padding: 10px;
+  border: 2px solid #323436;
+  border-radius: 5px;
+  height: 200px;
+  overflow: auto;
+  padding: 10px;
 }
 
 .popUpInput__message__image > div {
-    height: 100%;
-    border-radius: 5px;
-    background-color: #323436;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #323436;
 }
 
 .popUpInput__message__image > div:hover {
-    background-color: #5a5d61;
+  background-color: #5a5d61;
 }
 
 .popUpInput__message__image a {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 18px;
-    height: 18px;
-    background-color: #606264;
-    border-radius: 50%;
-    text-align: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #606264;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .popUpInput__message__image input {
-    display: none;
+  display: none;
 }
 
 .popUpInput__message__image img {
-    width: 100%;
+  width: 100%;
 }
 
 .popUpInput__message__image p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .popUpInput__message__initial {
-    position: absolute;
-    top: 0;
-    font-size: 24px;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  font-size: 24px;
+  z-index: -1;
 }
 
 .popUpInput__message__initial.off {
-    display: none;
+  display: none;
 }
 
 .popUpInput__widget {
-    display: grid;
+  display: grid;
 }
 
 .popUpInput__widget > :nth-child(1) {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
 }
 
 .popUpInput__widget > :nth-child(1) > :nth-child(2) {
-    justify-self: end;
+  justify-self: end;
 }
 
 .popUpInput__widget > :nth-child(2) {
-    display: grid;
-    grid-template-columns: 1fr min-content min-content min-content min-content min-content;
-    align-items: center;
-    padding: 10px;
-    margin-top: 20px;
-    border: thin solid #b0b3b8;
-    border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr min-content min-content min-content min-content min-content;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  border: thin solid #b0b3b8;
+  border-radius: 5px;
 }
 
 .popUpInput__widget > :nth-child(2) > * {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .popUpInput__widget > :nth-child(3) {
-    background-color: #505151;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
+  background-color: #505151;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
 }

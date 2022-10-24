@@ -1,19 +1,19 @@
 .menu {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menu > div {
-    background-color: #3a3b3c;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-left: 20px;
-    position: relative;
+  background-color: #3a3b3c;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 20px;
+  position: relative;
 }
 
 .menu > div > * {
-    position: absolute;
-    top: 4px;
-    left: 4px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
 }

@@ -9,21 +9,21 @@ import './Option.css';
 function Option() {
   return (
     <div className='option'>
-        <div className='option__home'>
-            <HomeIcon style={{ color: '#2374e1', fontSize: '36px' }} />
-        </div>
-        <div className='option__watch'>
-            <SmartDisplayIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
-        </div>
-        <div className='option__marketplace'>
-            <StorefrontIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
-        </div>
-        <div className='option__communities'>
-            <PeopleIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
-        </div>
-        <div className='option__gaming'>
-            <SportsEsportsIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
-        </div>
+      <div className='option__home'>
+        <HomeIcon style={{ color: '#2374e1', fontSize: '36px' }} />
+      </div>
+      <div className='option__watch'>
+        <SmartDisplayIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
+      </div>
+      <div className='option__marketplace'>
+        <StorefrontIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
+      </div>
+      <div className='option__communities'>
+        <PeopleIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
+      </div>
+      <div className='option__gaming'>
+        <SportsEsportsIcon style={{ color: '#b0b3b8', fontSize: '36px' }} />
+      </div>
     </div>
   );
 }
