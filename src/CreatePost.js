@@ -50,6 +50,39 @@ function CreatePost(props) {
     setInputText(text);
   }
 
+  /* reference
+   * https://htmldom.dev/paste-as-plain-text/
+   */
+  const handlePaste = (e) => {
+    // Prevent the default action
+    e.preventDefault();
+
+    // Get the copied text from the clipboard
+    const text = e.clipboardData
+      ? (e.originalEvent || e).clipboardData.getData('text/plain')
+      : // For IE
+      window.clipboardData
+      ? window.clipboardData.getData('Text')
+      : '';
+
+    if (document.queryCommandSupported('insertText')) {
+      document.execCommand('insertText', false, text);
+    } else {
+      // Insert text at the current position of caret
+      const range = document.getSelection().getRangeAt(0);
+      range.deleteContents();
+
+      const textNode = document.createTextNode(text);
+      range.insertNode(textNode);
+      range.selectNodeContents(textNode);
+      range.collapse(false);
+
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  }
+
   const submitPost = async (e) => {
     e.preventDefault();
 
@@ -59,7 +92,6 @@ function CreatePost(props) {
         */
       try {
         if (inputImage?.exist === false) {
-          console.log('upload image');
           await uploadBytes(inputImage.f_ref, inputImage.file);
         }
 
@@ -157,7 +189,7 @@ function CreatePost(props) {
               </div>
             </div>
             <div className="popUpInput__message">
-              <div className="popUpInput__message__text" contentEditable="true" onInput={ handleTextChanged }>
+              <div className="popUpInput__message__text" contentEditable="true" onInput={ handleTextChanged } onPaste={ handlePaste }>
               </div>
               { hasImage &&
                 <div className="popUpInput__message__image" onClick={ openImageFile }>
@@ -200,7 +232,7 @@ function CreatePost(props) {
       }
       <div className='createPost__top'>
         <Avatar src={ props.avatar } sx={{ width: 32, height: 32}} />
-        <div className='trPopUpInput' onClick={ openPopUp }><span>{ inputText ? inputText : "What's on your mind, " + props.name + "?" }</span></div>
+        <div className='trPopUpInput' onClick={ openPopUp }><span>{ "What's on your mind, " + props.name + "?" }</span></div>
       </div>        
       <div className='createPost__bottom'>
         <div className='createPost__bottom__option'>

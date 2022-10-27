@@ -28,7 +28,7 @@ const auth = getAuth(app);
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
-const colRef = collection(db, Your collection name);
+const colRef = collection(db, 'posts');
 
 // Initialize Cloud Storage and get a reference to the service
 const storage = getStorage(app);

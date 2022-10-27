@@ -114,6 +114,7 @@
   border: none;
   outline: none;
   font-size: 24px;
+  word-break: break-word;
 }
 
 .popUpInput__message__image {

@@ -17,6 +17,10 @@
 	margin-right: auto;
 }
 
+.login > div > p {
+	color: #eff2f5;
+}
+
 .App-logo {
 	height: 40vmin;
 	pointer-events: none;
